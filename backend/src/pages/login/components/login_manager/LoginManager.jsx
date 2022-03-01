@@ -67,7 +67,7 @@ class LoginManager extends Component{
             
             if(response.result){
                 AuthenticationService.registerSuccessfulLogin(response.data.id)
-                this.props.history.push('/search/match/')
+                this.props.history.push('/find/match/')
             }else{
                 this.setState({errorLogin: true})
             }
@@ -80,7 +80,7 @@ class LoginManager extends Component{
 
             if(response.result){
                 AuthenticationService.registerSuccessfulLogin(response.data.id)
-                this.props.history.push('/search/match/')
+                this.props.history.push('/find/match/')
             }else{
                 this.setState({errorLogin: true})
             }

@@ -1,6 +1,6 @@
 import React, {Component} from "react"
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
-import { Error, HomePage, Login, Profile, Registration, SearchMatch, ShowFriends, UserInfoUpdate, ShowMatches, ShowFriendRequests, FindFriends } from '@pages/index.js'
+import { Error, HomePage, Login, Profile, Registration, FindMatch, ShowFriends, UserInfoUpdate, ShowMatches, ShowFriendRequests, FindFriends } from '@pages/index.js'
 import FileUpload from '@pages/test/FileUpload.jsx'
 import { AuthenticatedRoute, Footer, Header } from '@routes/component/index.js'
 
@@ -21,7 +21,7 @@ class Routes extends Component {
                         <Switch>
                             {/* <Route path="/chat_room/" component={}/> */}
                             <Route path="/file/" component={FileUpload}/>
-                            <AuthenticatedRoute path="/search/match/" component={SearchMatch}/> 
+                            <AuthenticatedRoute path="/find/match/" component={FindMatch}/> 
                             <AuthenticatedRoute path="/profile/settings/update" component={UserInfoUpdate}/> 
                             <Route path="/registration/" component={Registration}/>
                             <Route path="/login/" component={Login}/>

@@ -51,7 +51,7 @@ class Header extends Component {
 
                 { isUserLoggedIn &&
 
-                    <Nav.Link href="/search/match">
+                    <Nav.Link href="/find/match">
                         <Button type="button" variant="light" className="btn btn-ligh size-btn-header ms-3">Find match</Button>
                     </Nav.Link>
                 }

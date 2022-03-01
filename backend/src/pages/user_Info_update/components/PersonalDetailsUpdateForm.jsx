@@ -121,7 +121,7 @@ class PersonalDetailsUpdateForm extends Component {
         user.hashpassword = this.state.Password
 
         UserDataService.updateUser(user,this.state.id)
-            .then(this.props.history.push('/search/match/'))
+            .then(this.props.history.push('/find/match/'))
 
         this.imageUpdate()
 

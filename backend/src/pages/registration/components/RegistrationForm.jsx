@@ -103,7 +103,7 @@ class RegistrationForm extends Component {
         
         AuthenticationService.registerSuccessfulLogin(UriDataServiceResponse.data.id)
         
-        this.props.history.push('/search/match/')
+        this.props.history.push('/find/match/')
 
         }catch(e){
               console.log(e)
