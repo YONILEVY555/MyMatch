@@ -1,0 +1,320 @@
+
+
+.set-same-screen-size{
+  height: 100vh;
+  width:  100vw;
+}
+
+.opacity-100-importent{
+  opacity: 1 !important;
+}
+
+.Background-purple{
+  background: #a3218e !important; 
+}
+
+.Background-green{
+  background: #6fbf42 !important; 
+}
+
+.Background-gray{
+  background: #dfd7f6 !important; 
+}
+
+.Background-blue{
+  background: #1f4199 !important; 
+}
+
+.color-text-yellow{
+  color: #f8a51b !important; 
+}
+
+.color-text-green{
+  color: #6fbf42 !important; 
+}
+
+.image-input-file{
+  height: 8em !important; 
+}
+
+.image-upload>input {
+  display: none;
+}
+
+.size-btn-header{
+  width: 110px;
+  height: 50px;
+}
+
+.size-image-find-Friends{
+  width: 200px;
+  height: 200px;
+}
+
+.set-element-center-screen{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 100px;
+    height: 100px;
+}
+
+.Form-Control-height{
+  max-height: 10px;
+}
+
+.wrapper{
+  overflow:auto;
+  max-width: 22em;
+}
+
+.c1{
+ width: 160px !important;
+ float:left;
+ background:blue;
+}
+
+.c3{
+  margin:0 auto;
+  width:105px !important;
+}​
+
+.c2{
+  float:right;
+}​
+
+.newGrid{
+  width: 21em;
+}
+
+.my-overflow{
+  overflow-y: auto;
+}
+
+.my-hight{
+  height: 580px;
+}
+
+.test{
+  left: 50% !important;
+  width:50%;
+}
+
+.show-friens-div-image{
+  max-width: 55rem;
+  margin: 4rem auto;
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-auto-rows: 70px;
+
+}
+
+.show-friens-container{
+  width: 54rem !important;
+  margin-top: 50px;
+}
+
+.show-friens-col-2{
+  text-align: left;
+}
+
+.show-friens-col-1{
+  text-align: right;
+}
+
+.show-friens-image{
+  width: 20% ;
+  height: 100% ;
+  object-fit: cover;
+  margin-left: 60px;
+}
+
+.show-friens-btn{
+  margin-right: 100px !important;
+}
+
+
+.bdika{
+  width:100%;
+  height: 100%;
+}
+
+.my{
+  display: inline !important;
+}
+
+/* font-size */
+.font-big{
+  font-size: 70px;
+}
+
+.font-medium{
+  font-size: 50px;
+}
+
+.font-small{
+  font-size: 30px;
+}
+
+/* font-size */
+
+/*Error*/
+.div-error-page{
+
+  height: 200px;
+  width: 50%;
+  margin: auto;
+  margin-top:100px;
+  text-align: right;
+}
+/*end-Error*/
+
+
+/* ViewerPotentialMatch*/
+
+.card-display-match-body{
+  width: 100%;
+  height: 15% !important;
+}
+
+.display-match-btn{
+
+  margin-left: 3px;
+
+}
+
+.card-display-match{
+  width: 350px;
+  height: 500px; 
+  margin-top: 20px;
+  right: 50px;
+}
+
+.card-display-match-image{
+  width: 100%;
+  height: 70%;
+}
+
+/*end-ViewerPotentialMatch*/
+
+/* ViewerNetworkVisualization*/
+.container-grid-syatem{
+  left: 140px;
+}
+
+.grid-item {
+  position: relative;
+  text-align: center;
+}
+
+.grid-image{
+  width: 70px;
+  height: 70px;
+  margin-top: 30px;
+}
+
+/*end-ViewerNetworkVisualization*/
+
+/*main */
+
+.App {
+  text-align: center;
+  height: 100vh
+}
+
+/*main end*/
+
+/*Headerr*/
+
+.header-image {
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+.header-image-txt{
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 50px
+}
+
+.header-btn-login{
+  margin-top: 0;
+  margin-right: 50px;
+  margin-left: 60px;
+}
+
+.header-btn-lang{
+  margin-top: 11px;
+
+}
+
+/* Header-end*/
+
+/* Home-Page*/
+
+.card-home-page{
+  width: 36rem;
+  position: absolute;
+  margin-top: 200px;
+}
+
+/* end-Home-Page*/
+ 
+ /* registration */
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+  font-size: 1rem;
+  line-height: 2.15;
+  padding-left: .75em;
+  padding-right: .75em;
+}
+.card-registration .select-arrow {
+  top: 13px;
+}
+
+/* registration-end */
+
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
