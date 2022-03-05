@@ -32,6 +32,8 @@ import com.example.demo.constants.Constants;
 import com.example.demo.image.Image;
 import com.example.demo.image.ImageJpaRepository;
 import com.example.demo.message.Message;
+import com.example.demo.preferences.Gender;
+import com.example.demo.preferences.Preferences;
 import com.example.demo.preferences.PreferencesJpaRepository;
 import com.example.demo.relationship.Relationship;
 import com.example.demo.relationship.RelationshipJpaRepository;
@@ -234,7 +236,15 @@ public class UserJpaResource {
 	@GetMapping("/jpa/users/{id}/optional_match")
 	public Set<User> optionalMatch (@PathVariable long id){
 		
-		return userJpaRepository.getAllOptionMatch(id);
+		Set<User> allOptionMatch = userJpaRepository.getAllOptionMatch(id);
+		
+		if(allOptionMatch!=null)
+			   return allOptionMatch;
+			else {
+				throw new ResponseStatusException(
+						  HttpStatus.NOT_FOUND, "Option match not found"
+				);
+			}
 		
     }
 	
@@ -245,6 +255,29 @@ public class UserJpaResource {
 		
 		return userJpaRepository.getAllPathes(id,match);
 		
+    }
+	
+	@GetMapping("/jpa/users/{id}/preferences")
+	public Preferences getPreferences (@PathVariable long id ){
+		
+		
+		User user = userJpaRepository.findById(id).get();
+		
+		return preferencesJpaRepository.findByUser(user);
+								
+    }
+	
+	@PutMapping("/jpa/users/{id}/preferences")
+	public ResponseEntity<Void> updatePreferences (
+			                                       @PathVariable long id, 
+			                                       @RequestParam(value = "age") int age,
+								                   @RequestParam(value = "distance") int distance,
+								                   @RequestParam(value = "gender") Gender gender
+								                   ){
+		
+		preferencesJpaRepository.updatePreferences(id,age,distance,gender);
+		
+		return ResponseEntity.ok().build(); 
     }
 	
 }

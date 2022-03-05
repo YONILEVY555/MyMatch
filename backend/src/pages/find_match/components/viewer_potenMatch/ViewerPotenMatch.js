@@ -26,5 +26,3 @@ export const ViewerPotenMatch = (props) => {
      </>
 
 }
- 
-export default ViewerPotenMatch

@@ -72,4 +72,3 @@ export const ViewerNetworkVisualization = (props) => {
 
 }
  
-export default ViewerNetworkVisualization

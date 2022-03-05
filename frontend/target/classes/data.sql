@@ -22,10 +22,10 @@
 	(21, '1996-01-16', 'my name is yoval', 'yoval@gmail.com', 'F','', '0546761921', 'yoval'),
 	(22, '1997-01-16', 'my name is tahonia', 'tahonia@gmail.com', 'F','', '0546761922', 'tahonia'),
 	(23, '1998-01-16', 'my name is miri', 'miri@gmail.com', 'F','', '0546761923', 'miri'),
-	(24, '1994-01-15', 'my name is yoni', 'yonilevy555@gmail.com', 'M','$2a$12$1f6Oe28axM9we1Gj.HfjN.mS1ovnm9yWoPFtJnJDkugD/d0lGfI3K', '0546761968', 'yoni');
+	(24, '1994-01-15', 'my name is yoni', 'yonilevy555@gmail.com', 'M','$2a$12$8Da4PfM6WOgD3kn.IZKgj./iUE0ZSYHX2GcCJY/l1Y6eAlxdlT4j.', '0546761968', 'yoni');
 
-	INSERT INTO MESSAGE (DATE, HOUR, MINUTE, SECOND, SOURCE, TARGET) VALUES
-	('1994-01-16',1,2,3,1,2);
+	INSERT INTO PREFERENCE(USER_ID, GENDER, MAX_AGE, MAX_DISTACE) VALUES
+	(24,'F',100,20);
 	
 	INSERT INTO RELATIONSHIP (SOURCE, TARGET, STATUS, TYPE) VALUES
 	(1,16,'A','F'),

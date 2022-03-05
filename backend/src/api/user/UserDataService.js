@@ -4,12 +4,6 @@ import axios from "axios"
 
 class UserDataService{
 
-    // retrieveAllUsers(){
-     
-    //     return axios.get(`${JPA_API_URL}/users`)
-
-    // }
-
     async retrieveUser(id){
 
         return axios.get(`${JPA_API_URL}/users/${id}`)
@@ -106,6 +100,18 @@ class UserDataService{
     async getFriends(id){ 
     
         return axios.get(`${JPA_API_URL}/users/${id}/friends`)
+
+    }
+
+    async getPreferences(id){ 
+    
+        return axios.get(`${JPA_API_URL}/users/${id}/preferences`)
+
+    }
+
+    async updatePreferences(id,requestParam){ 
+    
+        return axios.put(`${JPA_API_URL}/users/${id}/preferences`,null,requestParam)
 
     }
 }

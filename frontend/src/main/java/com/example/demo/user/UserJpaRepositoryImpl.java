@@ -118,7 +118,21 @@ public class UserJpaRepositoryImpl implements UserJpaRepositoryCustom  {
 	
 	public Set<User> getAllOptionMatch(long id){
 		
-		return ArrayHelpers.mergeSet(getAllThirdCircleFriends(id),getAllSecondCircleFriends(id));
+		User user = userJpaRepository.findById(id).get();
+		
+		Preferences preferences = preferencesJpaRepository.findByUser(user);
+		
+//		return  ArrayHelpers.mergeSet(getAllThirdCircleFriends(id),getAllSecondCircleFriends(id));
+
+		Set<User> allOptionMatch = ArrayHelpers.mergeSet(getAllThirdCircleFriends(id),getAllSecondCircleFriends(id));
+		
+		Set<User> fillterOptionMatch = ArrayHelpers.filterByAgeAndGender(allOptionMatch,preferences.getMaxAge(),preferences.getMaxDistace(),preferences.getGender());
+		
+		Logger logger = Logger.getLogger(UserJpaRepositoryImpl.class.getName()); 
+		 
+		logger.log(Level.INFO, "myFillterOptionMatch: {0}", new Object[] {fillterOptionMatch});
+		 
+		return fillterOptionMatch;
 		
 	}
 	

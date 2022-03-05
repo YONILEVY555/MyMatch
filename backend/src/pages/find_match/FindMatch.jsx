@@ -1,11 +1,8 @@
 
 import React, { Component } from 'react'
-import ViewerNetworkVisualization from "./components/Viewer_network_visualization/ViewerNetworkVisualization.js"
-import ViewerPotenMatch from "./components/viewer_potenMatch/ViewerPotenMatch.js"
+import {ViewerNetworkVisualization,ViewerPotenMatch,NewMatch,NotFoundOptionMatches} from './components/index.js'
 import {UserDataService} from '@api/index.js'
 import AuthenticationService from '@services/AuthenticationService.js'
-import {Color} from '@utils/constants/Color.js'
-import {NewMatch} from './components/new_match/NewMatch'
 
 class SearchMatch extends Component {
  
@@ -21,6 +18,7 @@ class SearchMatch extends Component {
                    initialIndexPathSearch: 0,
                    relationships: null,
                    flagNewMatch: false,
+                   isFoundOptionMatches: true
             }
         
     }
@@ -38,19 +36,31 @@ class SearchMatch extends Component {
             }
         }
     
-        const resOptionMatches = await UserDataService.getOptionMatches(this.state.id); 
-        const resPathes = await UserDataService.getPathes(this.state.id, resOptionMatches.data[0].id ); 
-        const resMyImages = await UserDataService.getImages(this.state.id);
-        const relationships = await UserDataService.getRelationships(this.state.id,requestParam);
+        try{
+            const resOptionMatches = await UserDataService.getOptionMatches(this.state.id); 
+            const resPathes = await UserDataService.getPathes(this.state.id, resOptionMatches.data[0].id ); 
+            const resMyImages = await UserDataService.getImages(this.state.id);
+            const relationships = await UserDataService.getRelationships(this.state.id,requestParam);
+            
+            this.setState(
+                { 
+                    optionMatches: resOptionMatches.data,
+                    pathes: resPathes.data,
+                    myImages: resMyImages.data, 
+                    relationships: relationships.data,
+                    isFoundOptionMatches: true
+                }
+            )
+        }catch(e){
 
-        this.setState(
-            { 
-                optionMatches: resOptionMatches.data,
-                pathes: resPathes.data,
-                myImages: resMyImages.data, 
-                relationships: relationships.data
-            }
-        )
+        
+            this.setState(
+                { 
+                    isFoundOptionMatches: false
+                }
+            )
+
+        }
     }
 
     likeClicked = async () =>{
@@ -151,18 +161,23 @@ class SearchMatch extends Component {
             flagNewMatch: true
         })
 
-        this.makeTimer()
+        await this.makeTimer()
 
     }
 
-    makeTimer = () =>{
-        if(this.state.flagNewMatch){
-            setInterval(() => {
-                this.setState({
-                    flagNewMatch: false
-                })
-              }, 5000)
-        }
+    makeTimer = async () =>{
+
+        return new Promise( (resolve, reject) =>{
+            if(this.state.flagNewMatch){
+                setInterval(() => {
+                    this.setState({
+                        flagNewMatch: false
+                    })
+                    return resolve ({result:true})
+                  }, 5000)
+            }
+        })
+
     }
 
     createPartialMatch = async (requestParam) =>{
@@ -225,20 +240,24 @@ class SearchMatch extends Component {
         return (
             <div>
                
-               { !this.state.flagNewMatch && <ViewerNetworkVisualization pathes={this.state.pathes} 
-                                                                         optionMatch={optionMatch}
-                                                                         myImages={this.state.myImages} 
-                                                                         startIndex={this.state.initialIndexPathSearch}
-                                                                         updateInitialIndexPathSearchToZero = {this.updateInitialIndexPathSearchToZero} />} 
+               { ( (!this.state.flagNewMatch) && 
+                   this.state.isFoundOptionMatches) && <ViewerNetworkVisualization pathes={this.state.pathes} 
+                                                                                    optionMatch={optionMatch}
+                                                                                    myImages={this.state.myImages} 
+                                                                                    startIndex={this.state.initialIndexPathSearch}
+                                                                                    updateInitialIndexPathSearchToZero = {this.updateInitialIndexPathSearchToZero} />} 
 
-               { !this.state.flagNewMatch && <ViewerPotenMatch likeClicked = {this.likeClicked} 
-                                                               backClicked = {this.backClicked}
-                                                               unlikeClicked = {this.unlikeClicked}
-                                                               getMorePathes = {this.getMorePathes}
-                                                               optionMatch = {optionMatch} />} 
+               { ( (!this.state.flagNewMatch) && 
+                     this.state.isFoundOptionMatches) && <ViewerPotenMatch likeClicked = {this.likeClicked} 
+                                                                            backClicked = {this.backClicked}
+                                                                            unlikeClicked = {this.unlikeClicked}
+                                                                            getMorePathes = {this.getMorePathes}
+                                                                            optionMatch = {optionMatch} />} 
 
                 {this.state.flagNewMatch && <NewMatch image={prevOptionMatch.image[0].content} 
                                                       nameMatch={prevOptionMatch.username} />}
+
+                { (!this.state.isFoundOptionMatches) && <NotFoundOptionMatches/> }
                                           
         
             </div>

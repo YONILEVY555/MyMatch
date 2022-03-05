@@ -158,7 +158,7 @@ class ShowMatches extends Component {
     buildViewMatch = (username,id,image, cancelMatchesClick, viewMoreActions,cancelViewMoreActions ) => {
 
       return  <div className='wrapper'>
-                <Button style={{background: Color.BLUE, border: Color.BLUE  }} onClick={e => cancelMatchesClick(e.target.id)}  id={id} className='c1 mt-4 d-block'>cancel matche</Button>
+                <Button style={{background: Color.BLUE, border: Color.BLUE  }} onClick={e => cancelMatchesClick(e.target.id)}  id={id} className='c1 mt-4 d-block'>cancel match</Button>
                 <div className='c3 d-inline-block'>{username}</div> 
                 <Image id={id+"image"}
                        onMouseEnter={e => viewMoreActions(e.target.id)} 

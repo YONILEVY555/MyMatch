@@ -1,5 +1,19 @@
 
 
+.custom-range::-webkit-slider-thumb {
+  background: #1f4199;
+}
+
+.custom-range::-moz-range-thumb {
+  background: #1f4199;
+}
+
+.custom-range::-ms-thumb {
+  background: #1f4199;
+}
+
+
+
 .set-same-screen-size{
   height: 100vh;
   width:  100vw;

@@ -10,5 +10,7 @@ import com.example.demo.user.UserJpaRepositoryCustom;
 public interface PreferencesJpaRepository extends JpaRepository<Preferences, Long>{
 	
 	public void insertPreferences(long id);
-	
+	public void updatePreferences(long id,int age, int distance, Gender gender);
+	public Preferences findByUser(User user);
+
 }

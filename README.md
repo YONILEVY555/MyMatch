@@ -2,7 +2,7 @@
 
 <h2 align="left">the project's target:</h2>
 
-<p>Create an interface that will allow a new and better way to find a relationship.</p> 
+<p>To create an interface that will allow a new and better way to find a relationship.</p> 
 
 <h2 align="left">Technologies:</h2>
 
@@ -15,53 +15,58 @@
 
 <h2 align="left">A brief introduction for those who do not know how the Tinder app works:</h2>
 
-<p>After registering for the app you will see pictures of "potential matches" for each such picture you can make "liked" or "disliked". When two people "love" each other, a "match" is created between them and the ability to talk in a chat opens up for them. (Very important - you can not know that you liked or who liked you until a match was made) The idea was very successful and became very popular around the world. The reasons why this idea was so successful are many. The following reasons can be listed to explain why it is so successful. Anonymity - Each user is required to provide only a few details that add up to the photo, age and first name. 2. Exposure to a huge pool of "potential matches". 3. Lowering all the psychological barriers that exist in reality. With the flick of a finger you decide who is and who is not. The advantages I mentioned above also produce two disadvantages and they are: 1. Zero commitment. That everything is so easy and so anonymous then there is also zero commitment. 2. Very little reliability. Given so few details you have no idea who is on the other side. My interface will solve these two problems</p> 
+<p>After registering for the app you will see pictures of "potential matches" for each such picture you can make "like" or "dislike". When two people "like" each other, a "match" is created between them and the ability to talk in a chat opens up for them. No one can know that you "like" or "who like you" until a match is created. The idea was very successful and became very popular around the world. The reasons why this idea was so successful are many. The following reasons can be listed to explain why it is so successful.1. Anonymity - each user is required to provide only a few details that add up to the photo, age and first name. 2. Exposure to a huge pool of "potential matches". 3. Lowering all the psychological barriers that exist in reality. With the flick of a finger you decide who is and who is not. The advantages I mentioned above also produce two disadvantages and they are: 1. Zero commitment. That everything is so easy and so anonymous then there is also zero commitment. 2. Very little reliability. Given so few details' you have no idea who is on the other side. My interface will solve these two problems.
+</p> 
 
 <h2>The idea in detail:</h2>
 
 <h3>Some definitions for understanding the concept:</h3>
 
-<p>First circle - the people you know personally. That you have an intimate relationship with them. According to the "Denver Number" the number of people who can be in this circle is at most 150</p> 
+<p> First circle (friends) - the people you know personally and that you have an intimate relationship with them. According to the "Denver Number" the number of people who can be in this circle is at most 150.</p> 
 
-<p>Second circle - friends of friends. That is, if I know Noya and Noya knows Shaked then Shaked is in a second circle.</p> 
+<p>Second circle - friends of friends. That is, if I know Noya and Noya knows Shaked then Shaked is in the second circle.</p> 
 
-<p>Potential Match - People who are in the user's second or third circle.</p> 
+<p>Third circle - a friend of a friend of a friend. The idea is already clear.</p> 
+
+<p>Potential Match - people who are in the user's second or third circle.</p> 
 
 ```diff
 -It's important to note this ->
 ```
 
-<p>assuming each app user has 100 members, how many potential matches can he have? Theoretically the maximum possible is: that in the second circuit it will have 100 ^ 2 = 10K options and in the third circuit 100 ^ 3 = 1M. But in reality one should always do filtering according to his preferences such as age, gender etc. In addition to this the duplicates should be filtered and also the members from the first circle who are in the second and third circles should be filtered. So reality has a lot less. But there are still quite a few at all</p>
+<p>Each user adds up to 100 friends and no more!. The friends are people he knows that he trusts and that he would be happy through them to know a spouse. You can find friends by their cell phone number or their email. Like on Tinder, in the search for a potential match, pictures of the potential matches will appear.</p>
 
-<h3>And for the idea:</h3>
+<p>And this is where my idea comes in, in a visual way you can see how you are related to the match that appears on the screen. See image below</p>
 
-<p> each user adds up to 100 members and no more! . People he knows that he trusts and that he would be happy to have known as a spouse or partner. You can search for friends by cell phone number
- Or their email. After mechanizing as on Tinder in the search for a potential match, pictures of the potential matches will appear. In a very important addition of a visual display of the network of connections through which it is connected to the same potential match (can be seen in the pictures below). And now before you like it you get more information that is not on Tinder.
+![alt text](https://github.com/YONILEVY555/MyMatch/blob/main/screenshot/find_match.png?raw=true)
+
+
+<p>It's important to note this - assuming each app user has 100 friends, how many potential matches can he have? Theoretically the maximum possible will be in the second circle one hundred squared and in the third circle it will be one hundred in the power of three. But in reality, we will filter according to our preferences such as age, gender etc. In addition, we will also filter duplicates and friends from the first circle who are already in the second and third circle. So, in reality there will be less, but there are still quite a few at all.</p>
+
+
+<h3>How does this solve Tinder's disadvantages? </h3>
+
+<p>Reliability- for the entire period of human existence there have never been such a technological development as there is today. Once people knew, saw or met only people they knew personally or someone that their friends knew from the first circle. The thought of trusting a complete stranger would have seemed delusional then. Today technology has completely changed this culture. There are biological instincts deeply ingrained in us. Even today we will feel great confidence in a person who is a friend of a friend and not just a stranger.
  </p>
 
- <h2>How does this solve Tinder's problem? Answer:</h2>
-
- <p>Reliability - For most of the years of human existence you have not been as glorious as technology is today. People knew, saw and met almost exclusively people they knew personally or someone from their first circle knew. The thought of trusting a complete stranger would have seemed delusional then. Today technology has changed sex from end to end this idea. But these biological instincts are still deeply ingrained in us. Even today we will feel great confidence in a person who is a friend of a friend and not just a stranger </p>
-
- <p>Commitment - we will explain this with an example: I, Jonathan, added 50 new members to my pool of friends. I go to the "Find a new match" page. And I get a picture of a girl named Noa. I see I'm connected to Noa in ten possible paths. One of the paths for the purpose of The example is: Jonathan (me) -> Neria -> Noa. I appreciate Neria and if I'm not really interested then I will not just do Like. Plus I know I'm no longer completely anonymous. Noah also saw how she was related to me. Now I know she knows who she knows who knows me. Obviously I will not allow myself to speak badly, take advantage of lying and all. I will only get into this if I have a drop of commitment
-</p>
+ <p>Commitment - I will explain this with an example: I, Jonathan, added 50 new friends to my pool of friends. I go to page "Find a new match", and then I get a picture of a girl named Noa. I will then see how I'm connected to Noa in ten possible paths. One of the paths for this purpose in the example: Jonathan (me) -> Neria -> Noa. I appreciate Neria but if I'm not really interested in Noa I will not give her "like"' but if I am interested I will give her a like . Now I'm no longer completely anonymous. Noa will also see how she is related to me. Obviously, I will not allow myself to speak badly, take advantage of lying and so'. I will only get into this if I have a drop of commitment. </p>
 
 <h2>pages:</h2>
 
 - ![#a3218e](https://via.placeholder.com/15/f03c15/000000?text=+) `Home`
-- ![#6fbf42](https://via.placeholder.com/15/c5f015/000000?text=+) `Main login`
-- ![#a3218e](https://via.placeholder.com/15/c5f015/000000?text=+) `Login by phone`
-- ![#f8a51b](https://via.placeholder.com/15/c5f015/000000?text=+) `Login by email`
-- ![#1f4199](https://via.placeholder.com/15/1589F0/000000?text=+) `Registration`
-- ![#a3218e](https://via.placeholder.com/15/f03c15/000000?text=+) `Find match`
-- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) `New matcht`
-- ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) `Profile`
-- ![#1f4199](https://via.placeholder.com/15/c5f015/000000?text=+) `Updated details`
-- ![#a3218e](https://via.placeholder.com/15/1589F0/000000?text=+) `Find friends`
-- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) `Show matches`
-- ![#6fbf42](https://via.placeholder.com/15/1589F0/000000?text=+) `Show friends`
-- ![#1f4199](https://via.placeholder.com/15/1589F0/000000?text=+) `Show friends request`
-
+- ![#f8a51b](https://via.placeholder.com/15/c5f015/000000?text=+) `Main login`
+- ![#6fbf42](https://via.placeholder.com/15/c5f015/000000?text=+) `Login by phone`
+- ![#1f4199](https://via.placeholder.com/15/c5f015/000000?text=+) `Login by email`
+- ![#a3218e](https://via.placeholder.com/15/1589F0/000000?text=+) `Registration`
+- ![#f8a51b](https://via.placeholder.com/15/f03c15/000000?text=+) `Find match`
+- ![#6fbf42](https://via.placeholder.com/15/1589F0/000000?text=+) `New matcht`
+- ![#1f4199](https://via.placeholder.com/15/c5f015/000000?text=+) `Profile`
+- ![#a3218e](https://via.placeholder.com/15/c5f015/000000?text=+) `Updated details`
+- ![#f8a51b](https://via.placeholder.com/15/1589F0/000000?text=+) `Find friends`
+- ![#6fbf42](https://via.placeholder.com/15/1589F0/000000?text=+) `Show matches`
+- ![#1f4199](https://via.placeholder.com/15/1589F0/000000?text=+) `Show friends`
+- ![#a3218e](https://via.placeholder.com/15/1589F0/000000?text=+) `Show friends request`
+- ![#a3218e](https://via.placeholder.com/15/1589F0/000000?text=+) `Error page`
 
 <h2> screenshot: </h2>
 

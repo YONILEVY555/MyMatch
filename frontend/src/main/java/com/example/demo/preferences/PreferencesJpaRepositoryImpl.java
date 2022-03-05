@@ -27,4 +27,18 @@ public class PreferencesJpaRepositoryImpl implements PreferencesJpaRepositoryCus
 		
 	}
 	
+	public void updatePreferences(long id,int age, int distance, Gender gender){	
+	    
+		User user = userJpaRepository.findById(id).get();
+		
+		Preferences preferences = preferencesJpaRepository.findByUser(user);
+		
+		preferences.setMaxAge(age);
+		preferences.setMaxDistace(distance);
+		preferences.setGender(gender);
+		
+		preferencesJpaRepository.save(preferences);
+				
+	}
+	
 }
