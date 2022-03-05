@@ -80,7 +80,7 @@
 
 <h3> Main login </h3>
 
-![alt text](https://github.com/YONILEVY555/MyMatch/blob/main/screenshot/find_friends.png?raw=true)
+![alt text](https://github.com/YONILEVY555/MyMatch/blob/main/screenshot/login_main.png?raw=true)
 
 <br><br>
 
@@ -145,6 +145,12 @@
 <h3> Show friends request </h3>
 
 ![alt text](https://github.com/YONILEVY555/MyMatch/blob/main/screenshot/friend_request.png?raw=true)
+
+<h3> Error page </h3>
+
+![alt text](https://github.com/YONILEVY555/MyMatch/blob/main/screenshot/error_page.png?raw=true)
+
+
 
 
 
