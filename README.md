@@ -1,6 +1,6 @@
 <h1 align="center"> Match </h1>
 
-<h2 align="left">the project's target:</h2>
+<h2 align="left">The project's target:</h2>
 
 <p>To create an interface that will allow a new and better way to find a relationship.</p> 
 
